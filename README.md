@@ -4,6 +4,9 @@
 ###### UNC - Chapel Hill Computer Science
 ###### geom (at) cs (dot) unc (dot) edu
 
+[![windows](https://github.com/timow-gh/PQP/actions/workflows/windows.yml/badge.svg?branch=master)](https://github.com/timow-gh/PQP/actions/workflows/windows.yml)
+[![linux](https://github.com/timow-gh/PQP/actions/workflows/linux.yml/badge.svg)](https://github.com/timow-gh/PQP/actions/workflows/linux.yml)
+
 |Version|Changes|
 |-------|:------|
 |1.3    | now use isnan() to test for NaN, instead of a comparison that was sometimes optimized away.
