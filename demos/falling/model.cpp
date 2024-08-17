@@ -41,7 +41,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include "GL/glut.h"
+#include <GL/glut.h>
 #include "model.h"
 
 inline
@@ -72,13 +72,13 @@ Vnormalize(double V[3])
   V[2] *= d;
 }
 
-Model::Model(char *tris_file)
+Model::Model(const char *tris_file)
 {
   FILE *fp = fopen(tris_file,"r");
   if (fp == NULL)
-  { 
-    fprintf(stderr,"Model Constructor: Couldn't open %s\n",tris_file); 
-    exit(-1); 
+  {
+    fprintf(stderr,"Model Constructor: Couldn't open %s\n",tris_file);
+    exit(-1);
   }
 
   fscanf(fp,"%d",&ntris);
@@ -103,7 +103,7 @@ Model::Model(char *tris_file)
     VcrossV(tri[i].n,a,b);
     Vnormalize(tri[i].n);
   }
-  
+
   fclose(fp);
 
   // generate display list
@@ -119,7 +119,7 @@ Model::Model(char *tris_file)
     glVertex3dv(tri[i].p2);
   }
   glEnd();
-  glEndList();  
+  glEndList();
 }
 
 Model::~Model()

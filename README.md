@@ -104,6 +104,13 @@ are contained in:
    falling through the center of a knobby torus.  Each of the three 
    proximity query types can be demonstrated.
 
+
+<div style="text-align: center;">
+  <h3>Spinning Demo</h3>
+  <img src="demos/spinning/demo_spinning.png" alt="Demo Image" width="400" height="400">
+</div>
+
+
 ## Creating a PQP Client Application
 
  `PQP.h` contains the most complete information on constructing client

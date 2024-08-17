@@ -72,7 +72,7 @@ Vnormalize(double V[3])
   V[2] *= d;
 }
 
-Model::Model(char *tris_file)
+Model::Model(const char *tris_file)
 {
   FILE *fp = fopen(tris_file,"r");
   if (fp == NULL)

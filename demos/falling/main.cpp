@@ -383,7 +383,7 @@ cb_display()
   EndDraw();
 }
 
-void LoadPath(PQP_REAL (* &R)[3][3], PQP_REAL (* &T)[3], char *filename) 
+void LoadPath(PQP_REAL (* &R)[3][3], PQP_REAL (* &T)[3], const char *filename)
 {
   FILE *fp;
   if ( (fp = fopen(filename, "r")) == NULL ) 
