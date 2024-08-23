@@ -328,6 +328,17 @@ PQP_Tolerance(PQP_ToleranceResult *res,
               PQP_REAL tolerance,
               int qsize = 2);
 
+// very robust triangle intersection test
+// uses no divisions
+// works on coplanar triangles
+int
+TriContact(PQP_REAL *P1, PQP_REAL *P2, PQP_REAL *P3,
+           PQP_REAL *Q1, PQP_REAL *Q2, PQP_REAL *Q3);
+
+PQP_REAL
+TriDistance(PQP_REAL R[3][3], PQP_REAL T[3], Tri *t1, Tri *t2,
+            PQP_REAL p[3], PQP_REAL q[3]);
+
 #endif 
 #endif
 
